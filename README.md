@@ -59,3 +59,37 @@ def weighted_rating(x, m=m, C=C):
 
 # Apply the weighted rating formula
 movies['weighted_rating'] = movies.apply(weighted_rating, axis=1)
+
+
+
+## NOTEBOOK 2:
+
+Content-Based Movie Filtering Project
+Project Overview
+This project, hosted on Deepnote, applies content-based filtering to movie datasets to recommend movies similar to a given title based on their content descriptions. It utilizes Python, Pandas, and machine learning techniques (TF-IDF and cosine similarity) to analyze and predict preferences.
+
+Features
+Data Loading: Loads movie data from CSV files to perform analysis.
+Text Analysis: Utilizes TF-IDF vectorization to transform text data from movie descriptions.
+Similarity Calculation: Computes similarity scores between movies using cosine similarity to find matches based on content.
+Movie Recommendations: Outputs movie recommendations based on content similarity.
+Installation
+This project is run on Deepnote, a collaborative data science platform. To get started:
+
+Visit Deepnote and create an account if you don't have one.
+Clone the project from the provided URL in the Deepnote environment.
+The necessary libraries (Pandas, scikit-learn) are listed in the requirements.txt and can be installed directly within Deepnote.
+How to Run
+Once you have access to the project in Deepnote:
+
+Open the movie_analysis.ipynb notebook.
+Run the cells sequentially to load the data, perform TF-IDF vectorization, and calculate the similarity matrix.
+Use the function similar_movies to get recommendations by entering the title of the movie and the number of recommendations desired.
+Usage Example
+python
+Copy code
+# Example of finding similar movies
+similar_movies("Avatar", 5)
+This function call would return five movies similar to "Avatar" based on the content descriptions provided in the dataset.
+
+
