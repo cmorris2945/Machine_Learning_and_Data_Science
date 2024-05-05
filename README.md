@@ -94,3 +94,51 @@ similar_movies("Avatar", 5)
 This function call would return five movies similar to "Avatar" based on the content descriptions provided in the dataset.
 
 
+## Notebook 3 COLLABORATIVE BASE-FILTERING PROGRAM:
+
+Collaborative Filtering ML Model Project
+Project Overview
+This project utilizes machine learning techniques to implement collaborative filtering for movie recommendations. Based on user ratings from the "ratings.csv" dataset, the project applies Singular Value Decomposition (SVD) from the Surprise library to predict user preferences and recommend movies.
+
+Features
+Data Loading and Preparation: Load user-movie rating data and prepare it for analysis.
+Model Training: Utilize the SVD algorithm to train the model on user ratings.
+Prediction and Validation: Make predictions for user-movie pairs and validate the model's performance using RMSE and MAE.
+Installation
+This project is designed to run on Deepnote, which provides a Jupyter notebook-like environment optimized for collaborative projects:
+
+Clone the Project: Access the project through Deepnote by cloning it from the provided URL.
+Environment Setup:
+Deepnote automatically manages the environment, but ensure the required packages are listed in requirements.txt.
+If manually setting up, install dependencies using:
+bash
+Copy code
+pip install pandas scikit-surprise
+How to Run
+Navigate through the notebook collaborative_filtering.ipynb in Deepnote:
+
+Load the Data: Run the cells under "Load the data here..." to import the ratings data.
+Create the Dataset: Setup the data for the Surprise library.
+Train the Model: Train the SVD model using the training dataset.
+Validate the Model: Evaluate the model using cross-validation techniques.
+Usage Example
+python
+Copy code
+from surprise import SVD, Dataset, Reader
+from surprise.model_selection import cross_validate
+
+# Load data
+ratings = pd.read_csv("ratings.csv")[["userId", "movieId", "rating"]]
+reader = Reader(rating_scale=(1, 5))
+data = Dataset.load_from_df(ratings, reader)
+
+# Build and train the SVD model
+trainset = data.build_full_trainset()
+svd = SVD()
+svd.fit(trainset)
+
+# Predict and validate
+cross_validate(svd, data, measures=['RMSE', 'MAE'], cv=5, verbose=True)
+
+
+
