@@ -2,6 +2,12 @@
 Repository for machine learning and data science projects.
 
 
+## MOVIE RECOMMENDATION PROGRAMS..... ##
+
+![image](https://github.com/cmorris2945/Machine_Learning_and_Data_Science_Repository/assets/30676606/e54077fe-d223-4377-b3f5-0c12984a668f)
+
+
+
 Movie Analysis and Popularity-Based Filtering Project
 Project Overview
 This project utilizes Python and Pandas to analyze movie datasets. It includes scripts for loading data from CSV files, performing exploratory data analysis, and calculating weighted ratings for movies based on their popularity and critical acclaim.
