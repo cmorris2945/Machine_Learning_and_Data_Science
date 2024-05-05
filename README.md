@@ -62,7 +62,8 @@ movies['weighted_rating'] = movies.apply(weighted_rating, axis=1)
 
 
 
-## NOTEBOOK 2:
+## NOTEBOOK 2 CONTENT-BASED FILTERING.ipynb:
+
 
 Content-Based Movie Filtering Project
 Project Overview
